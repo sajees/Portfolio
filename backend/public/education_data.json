@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "id": 2,
+            "digree": "Bsc",
+            "school": "UNI",
+            "year": "2014",
+            "description": "completed"
+        },
+        {
+            "id": 3,
+            "digree": "Bsc",
+            "school": "UNI",
+            "year": "2014",
+            "description": "completed"
+        },
+        {
+            "id": 4,
+            "digree": "Bsc",
+            "school": "UNI",
+            "year": "2014",
+            "description": "completed"
+        },
+        {
+            "id": 5,
+            "digree": "Bsc",
+            "school": "UNI",
+            "year": "2014",
+            "description": "completed"
+        }
+    ]
+}

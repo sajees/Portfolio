@@ -1,0 +1,31 @@
+@import './variables';
+@import './menu-icon';
+@import './main-menu';
+@import './home-page';
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+a[href], button {
+    touch-action: manipulation;
+}
+
+:root, body, html {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background: #f0f0f0;
+    overflow-x: hidden;
+}
+
+.sp-main-logo {
+    width: 200px;
+    position: absolute;
+    left: 50px;
+    top: 5px;
+    z-index: 100;
+    img {
+        width: 100%;
+    }
+}
