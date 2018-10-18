@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import MainLogo from "./__views/main-logo";
 import MainMenuIcon from "./__views/main-menu-icon";
 import MainMenu from "./__views/main-menu";
+import PageContentHandler from "./__views/page-content-handler";
 import "./__sass/app.scss";
 
 export default class App extends Component {
@@ -10,10 +11,9 @@ export default class App extends Component {
         this.state = {
             isMenuOpen: false
         }
-        this.clickHandleForMenuOpen = this.clickHandleForMenuOpen.bind(this);
+        this.handleForMenuToggle = this.handleForMenuToggle.bind(this);
     }
-    clickHandleForMenuOpen() {
-        console.log('opend');
+    handleForMenuToggle() {
         this.setState(state => ({
             isMenuOpen: !state.isMenuOpen
         }));
@@ -22,8 +22,9 @@ export default class App extends Component {
     return (
       <>
         <MainLogo/>
-        <MainMenuIcon clickHandleForMenuOpen={this.clickHandleForMenuOpen}/>
-        <MainMenu isMenuOpen={this.state.isMenuOpen}/>
+        <MainMenuIcon isMenuOpen={this.state.isMenuOpen} handleForMenuToggle={this.handleForMenuToggle}/>
+        <MainMenu isMenuOpen={this.state.isMenuOpen} handleForMenuToggle={this.handleForMenuToggle}/>
+        <PageContentHandler/>
       </>
     );
   }

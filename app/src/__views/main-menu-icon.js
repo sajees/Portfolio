@@ -4,20 +4,15 @@ var classNames = require("classnames");
 export default class MainMenuIcon extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isMenuOpen: false
-    };
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-    this.setState(state => ({
-      isMenuOpen: !state.isMenuOpen
-    }), this.props.clickHandleForMenuOpen());
+    this.props.handleForMenuToggle();
   }
   render() {
     let menuIconClass = classNames({
       "menu-icon": true,
-      open: this.state.isMenuOpen
+      open: this.props.isMenuOpen
     });
     return (
       <div className="sp-main-menu-icon" onClick={this.handleClick}>
