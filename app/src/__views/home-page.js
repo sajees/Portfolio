@@ -4,7 +4,9 @@ export default class HomePage extends Component {
   render() {
     
     return (
-      <div>Home page</div>
+      <section className="sp-page-section sp-home-page">
+        <h3>sajee ushan subasinghe</h3>
+      </section>
     );
   }
 }

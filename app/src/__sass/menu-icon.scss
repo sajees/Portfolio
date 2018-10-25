@@ -4,6 +4,8 @@
     position: absolute;
     right: 50px;
     top: 50px;
+    z-index: 100;
+    
     &:before {
         position: absolute;
         top: 50%;
