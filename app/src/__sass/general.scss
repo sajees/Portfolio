@@ -1,0 +1,54 @@
+.sp-main-logo {
+    width: 200px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    z-index: 100;
+    padding: 10px 20px 6px 20px;
+    background-color: $white-clr;
+    border-radius: 6px;
+    user-select: none;
+    img {
+      width: 100%;
+    }
+  }
+
+.sp-page-section {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
+    max-width: 1170px;
+    margin: 0 auto;
+
+    .sp-page {
+        padding: 150px 50px 50px 50px;
+
+        .sp-page__title {
+            display: block;
+            text-align: center;
+            width: 100%;
+            h2 {
+                @include fontSize(70);
+                margin: 0 0;
+                padding: 0 0;
+                color: $primary-clr;
+                position: relative;
+                display: inline-block;
+
+                &:after {
+                    content: '';
+                    width: 72%;
+                    height: 4px;
+                    background-color: $primary-clr;
+                    position: absolute;
+                    bottom: 0;
+                    left: 14%;
+                }
+            }
+        }
+        .sp-page__content {
+
+        }
+    }
+  }

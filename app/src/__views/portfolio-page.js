@@ -5,7 +5,12 @@ export default class PortfolioPage extends Component {
     
     return (
       <section className="sp-page-section">
-        <h6>Portfolio</h6>
+        <div className="sp-page">
+          <div className="sp-page__title">
+            <h2>Portfolio</h2>
+          </div>
+          <div className="sp-page__content"></div>
+        </div>
       </section>
     );
   }
