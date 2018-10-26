@@ -4,7 +4,9 @@ export default class ContactPage extends Component {
   render() {
     
     return (
-      <div>Contact page</div>
+      <section className="sp-page-section">
+        <h6>Contact</h6>
+      </section>
     );
   }
 }

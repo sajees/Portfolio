@@ -4,7 +4,9 @@ export default class ServicesPage extends Component {
   render() {
     
     return (
-      <div>Services page</div>
+      <section className="sp-page-section">
+        <h6>Services</h6>
+      </section>
     );
   }
 }

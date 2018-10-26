@@ -9,16 +9,25 @@ export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isMenuOpen: false
+            isMenuOpen: false,
+            staticData: null
         }
         this.handleForMenuToggle = this.handleForMenuToggle.bind(this);
     }
+    // componentDidMount() {
+    //     fetch("/api/static-data")
+    //     .then(response => response.json())
+    //     .then(statData => this.setState({
+    //       staticData: statData[0].HomePage[0].PageTitle
+    //     }))
+    //   }
     handleForMenuToggle() {
         this.setState(state => ({
             isMenuOpen: !state.isMenuOpen
         }));
     }
   render() {
+    // console.log(this.state.staticData);
     return (
       <>
         <MainLogo/>

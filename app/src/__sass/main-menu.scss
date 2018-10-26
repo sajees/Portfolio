@@ -41,7 +41,8 @@
                     padding: 10px 20px;
                     text-decoration: none;
                     color: $white-clr;
-                    font-size: 22px;
+                    @include fontSize(30);
+                    user-select: none;
 
                     &:hover, &:focus {
                         color: darker($white-clr,10%);

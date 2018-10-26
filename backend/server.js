@@ -2,12 +2,14 @@ import express from 'express'
 var bodyParser = require('body-parser');
 import ExperienceDataService from './controllers/ExpDataService';
 import EducationDataService from './controllers/EduDataService';
+import StaticDataService from './controllers/StaticDataService';
 var path = require('path');
 
 const   app = express(),
         port = 7878,
         expDataService = new ExperienceDataService(),
-        EduDataService = new EducationDataService();
+        EduDataService = new EducationDataService(),
+        StatDataService = new StaticDataService();
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -77,6 +79,11 @@ app.post("/api/education/", function (req, res) {
     EduDataService.addData(data).then(data => {
         res.status(200).json(data);
     });          
+});
+
+app.get("/api/static-data", function (req, res) {    
+    const staticData =  StatDataService.getData();
+    res.status(200).json(staticData);   
 });
 
 

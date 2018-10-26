@@ -10,7 +10,7 @@ import ContactPage from "./contact-page";
 export default class PageContentHandler extends Component {
   render() {
     return (
-      <div className="content">
+      <main className="content">
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/profile" component={ProfilePage} />
@@ -19,7 +19,7 @@ export default class PageContentHandler extends Component {
           <Route path="/portfolio" component={PortfolioPage} />
           <Route path="/contact" component={ContactPage} />
         </Switch>
-      </div>
+      </main>
     );
   }
 }

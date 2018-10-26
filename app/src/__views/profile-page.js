@@ -4,7 +4,9 @@ export default class ProfilePage extends Component {
   render() {
     
     return (
-      <div>Profile page</div>
+      <section className="sp-page-section">
+        <h6>Profile</h6>
+      </section>
     );
   }
 }

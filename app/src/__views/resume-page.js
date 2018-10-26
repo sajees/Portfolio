@@ -4,7 +4,9 @@ export default class ResumePage extends Component {
   render() {
     
     return (
-      <div>Resume page</div>
+      <section className="sp-page-section">
+        <h6>Resume</h6>
+      </section>
     );
   }
 }

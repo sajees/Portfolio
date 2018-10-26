@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "HomePage": [
+        {
+          "PageTitle": "Home",
+          "PageDescription": "Desc of Home"
+        }
+      ],
+      "ProfilePage": [
+        {
+            "PageTitle": "Profile",
+            "PageDescription": "Desc of Profile"
+        }
+      ]
+    }
+  ]
+}

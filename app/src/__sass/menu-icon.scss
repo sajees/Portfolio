@@ -5,6 +5,8 @@
     right: 50px;
     top: 50px;
     z-index: 100;
+    overflow: visible;
+    @extend .remove-default-button-styles;
     
     &:before {
         position: absolute;

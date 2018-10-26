@@ -1,0 +1,4 @@
+@mixin fontSize($property) {
+    font-size: $property+px;
+    font-size: ($property/10)+rem;
+  }
