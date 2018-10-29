@@ -1,10 +1,12 @@
 .main-menu-wrapper {
     background-color: $primary-clr;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
+    height: 100%;
+    width: 100%;
+    position: absolute;
     transition: .8s all cubic-bezier(0.22, 0.61, 0.36, 1);
     right: -100%;
+    top: 0;
+    z-index: 99;
 }
 
 .main-menu-wrapper.main-menu-wrapper--opened {
@@ -22,27 +24,25 @@
         height: 100%;
         align-items: center;
         justify-content: center;
-
         .main-menu {
             margin: 0 0;
             padding: 0 0;
             list-style-type: none;
-
             .main-menu__item {
                 display: block;
                 margin: 0 0 10px 0;
                 padding: 0 0;
                 text-align: center;
-
                 a {
                     display: block;
-                    padding: 10px 20px;
+                    padding: 3px 20px;
                     text-decoration: none;
                     color: $white-clr;
-                    font-size: 22px;
-
-                    &:hover, &:focus {
-                        color: darker($white-clr,10%);
+                    @include fontSize(40);
+                    user-select: none;
+                    &:hover,
+                    &:focus {
+                        color: darker($white-clr, 10%);
                     }
                 }
             }

@@ -1,0 +1,71 @@
+.sp-home-page {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh; // background-image: url('../__images/home-background.jpg');
+    background-color: #ccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    overflow-y: hidden;
+    .sp-home-typing-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 70px 50px 50px 50px;
+        flex-direction: column;
+        text-align: center;
+        user-select: none;
+        .sp-home-page-title {
+            display: block;
+            clear: both;
+            margin-bottom: 30px;
+            h1 {
+                @include fontSize(100);
+                line-height: 10rem;
+                margin: 0 0;
+                color: white;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+            }
+        }
+        .sc-bdVaJa {
+            min-height: 62px;
+            clear: both;
+            span,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                display: inline;
+                color: $primary-clr;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                @include fontSize(40);
+                line-height: 4rem;
+            }
+            .typed-cursor {
+                @include fontSize(40);
+                line-height: 4rem;
+            }
+        }
+    }
+}
+
+.sp-home-particals-wrapper {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    canvas {
+        width: 100%;
+    }
+}

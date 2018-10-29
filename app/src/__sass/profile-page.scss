@@ -1,0 +1,17 @@
+.sp-profile-page {
+    .sp-profile-section {
+        display: flex;
+        flex-direction: row;
+        .sp-profile-left {
+            background: orange;
+            width: 40%;
+        }
+        .sp-profile-right {
+            width: 100%;
+            background: beige;
+        }
+    }
+    .sp-hobbies-section {
+
+    }
+}
