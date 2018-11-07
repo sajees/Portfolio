@@ -1,13 +1,15 @@
 .sp-home-page {
     display: flex;
     width: 100vw;
-    min-height: 100vh; // background-image: url('../__images/home-background.jpg');
+    min-height: 100vh; 
+    // background-image: url('../__images/home-background.jpg');
     background-color: #ccc;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     position: relative;
     overflow-y: hidden;
+
     .sp-home-typing-container {
         width: 100%;
         display: flex;
@@ -68,4 +70,8 @@
     canvas {
         width: 100%;
     }
+}
+
+.sp-page-section.sp-home-page {
+    max-width: 100%;
 }

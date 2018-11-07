@@ -11,14 +11,16 @@ export default class PageContentHandler extends Component {
   render() {
     return (
       <main className="content">
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/profile" component={ProfilePage} />
-          <Route path="/resume" component={ResumePage} />
-          <Route path="/services" component={ServicesPage} />
-          <Route path="/portfolio" component={PortfolioPage} />
-          <Route path="/contact" component={ContactPage} />
-        </Switch>
+        <div className="content-inner-wrapper">
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/profile" component={ProfilePage} />
+            <Route path="/resume" component={ResumePage} />
+            <Route path="/services" component={ServicesPage} />
+            <Route path="/portfolio" component={PortfolioPage} />
+            <Route path="/contact" component={ContactPage} />
+          </Switch>
+        </div>
       </main>
     );
   }

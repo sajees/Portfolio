@@ -28,6 +28,7 @@
             display: block;
             text-align: center;
             width: 100%;
+            margin-bottom: 50px;
             h2 {
                 @include fontSize(70);
                 margin: 0 0;

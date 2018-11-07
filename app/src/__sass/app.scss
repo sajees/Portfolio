@@ -43,6 +43,16 @@ html {
     background: $primary-clr;
 }
 
+// main.content {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     top: 0;
+//     left: 0;
+//     z-index: 100;
+//     background: #f7f7f7;
+// }
+
 @media all and (max-width: 1400px) {
   :root {
     font-size: 52.5%;
