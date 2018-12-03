@@ -2,7 +2,7 @@
     background-color: $primary-clr;
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: fixed;
     transition: .8s all cubic-bezier(0.22, 0.61, 0.36, 1);
     right: -100%;
     top: 0;
@@ -24,6 +24,10 @@
         height: 100%;
         align-items: center;
         justify-content: center;
+        padding-top: 146px;
+        @include bp(xsphone) {
+            padding-top: 112px;
+        }
         .main-menu {
             margin: 0 0;
             padding: 0 0;

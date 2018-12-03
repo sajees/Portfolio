@@ -2,3 +2,42 @@
     font-size: $property+px;
     font-size: ($property/10)+rem;
 }
+
+@mixin bp($point) {
+    $bp-xsphone: "(max-width: 480px)";
+    $bp-sphone: "(max-width: 620px)";
+    $bp-phone: "(max-width: 768px)";
+    $bp-tab: "(max-width: 992px)";
+    $bp-lap: "(max-width: 1368px)";
+    $bp-desktop: "(min-width: 1369px)";
+    @if $point==xsphone {
+        @media #{$bp-xsphone} {
+            @content;
+        }
+    }
+    @else if $point==sphone {
+        @media #{$bp-sphone} {
+            @content;
+        }
+    }
+    @else if $point==phone {
+        @media #{$bp-phone} {
+            @content;
+        }
+    }
+    @else if $point==tab {
+        @media #{$bp-tab} {
+            @content;
+        }
+    }
+    @else if $point==lap {
+        @media #{$bp-lap} {
+            @content;
+        }
+    }
+    @else if $point==desktop {
+        @media #{$bp-desktop} {
+            @content;
+        }
+    }
+}

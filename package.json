@@ -9,6 +9,9 @@
     "dev": "node ./backend/index.js",
     "start": "nodemon"
   },
+  "nodemonConfig": {
+    "ignore": ["app/"]
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {

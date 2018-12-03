@@ -1,6 +1,10 @@
+.sp-hide {
+    display: none;
+}
+
 .sp-main-logo {
     width: 200px;
-    position: absolute;
+    position: fixed;
     left: 50px;
     top: 50px;
     z-index: 100;
@@ -9,9 +13,28 @@
     border-radius: 6px;
     user-select: none;
     img {
-      width: 100%;
+        width: 100%;
     }
-  }
+    @include bp(xsphone) {
+        width: 120px;
+        padding: 5px 8px 2px 8px;
+        top: 30px;
+        left: 30px;
+    }
+}
+
+main.content {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 90;
+}
+
+.content-inner-wrapper {
+    max-height: 100vh;
+    overflow-y: auto;
+}
 
 .sp-page-section {
     width: 100%;
@@ -20,36 +43,48 @@
     min-height: 100vh;
     max-width: 1170px;
     margin: 0 auto;
-
     .sp-page {
         padding: 150px 50px 50px 50px;
-
         .sp-page__title {
             display: block;
             text-align: center;
             width: 100%;
             margin-bottom: 50px;
             h2 {
-                @include fontSize(70);
+                @include fontSize(60);
                 margin: 0 0;
                 padding: 0 0;
                 color: $primary-clr;
                 position: relative;
                 display: inline-block;
-
+                font-weight: $fwBold;
+                text-transform: uppercase;
                 &:after {
                     content: '';
                     width: 72%;
                     height: 4px;
-                    background-color: $primary-clr;
+                    background-color: $gray-clr;
                     position: absolute;
                     bottom: 0;
                     left: 14%;
                 }
             }
         }
-        .sp-page__content {
-
+        .sp-page__sub-title {
+            display: block;
+            width: 100%;
+            margin-bottom: 50px;
+            h2 {
+                @include fontSize(36);
+                margin: 0 0;
+                padding: 0 0;
+                color: $black-clr;
+                position: relative;
+                display: inline-block;
+                font-weight: $fwSemiBold;
+                text-transform: uppercase;
+            }
         }
+        .sp-page__content {}
     }
-  }
+}

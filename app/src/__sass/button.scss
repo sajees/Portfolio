@@ -1,0 +1,36 @@
+.sp-btn-wrapper {
+    clear: both;
+    display: inline-block;
+
+    .sp-btn {
+        background: $white-clr;
+        background: linear-gradient(to left, $primary-clr 50%, $white-clr 50%);
+        background-size: 200% 100%;
+        background-position: left bottom;
+        transition: all 0.3s ease-out;
+        border: 2px solid $primary-clr;
+        box-shadow: none;
+        appearance: none;
+        cursor: pointer;
+        padding: 0 30px;
+        height: 50px;
+        line-height: 46px;
+        font-family: inherit;
+        @include fontSize(22);
+        font-weight: $fwSemiBold;
+        color: $primary-clr;
+        outline: none;
+        user-select: none;
+
+        .fa {
+          @include fontSize(18);
+          padding-right: 10px;
+        }
+      
+        &:hover {
+          background-position: right bottom;
+          color: $white-clr;
+        }
+      }
+}
+
