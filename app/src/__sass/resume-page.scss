@@ -24,7 +24,7 @@
             flex: 1;
             padding: 0 57px 50px 0;
             .sp-expe__comp-slot {
-                background-color: $gray-2;
+                background-color: $gray2Clr;
                 float: right;
                 padding: 8px 20px;
                 text-align: right;
@@ -34,8 +34,8 @@
                     content: '';
                     width: 12px;
                     height: 12px;
-                    background-color: $white-clr;
-                    border: 2px solid $primary-clr;
+                    background-color: $whiteClr;
+                    border: 2px solid $primaryCl;
                     border-radius: 100%;
                     position: absolute;
                     top: 50%;
@@ -47,7 +47,7 @@
                     content: '';
                     width: 58px;
                     height: 2px;
-                    background-color: $gray-2;
+                    background-color: $gray2Clr;
                     position: absolute;
                     top: 50%;
                     right: -57px;
@@ -58,20 +58,20 @@
             h6 {
                 @extend .m-p-none;
                 @include fontSize(22);
-                color: $primary-clr;
+                color: $primaryCl;
                 font-weight: $fwSemiBold;
             }
             span {
                 @extend .m-p-none;
                 @include fontSize(18);
-                color: $white-clr;
+                color: $whiteClr;
                 font-weight: $fwRegular;
             }
         }
         .sp-expe__position-desc {
             flex: 1;
             padding: 0 0 50px 57px;
-            border-left: 2px solid $gray-2;
+            border-left: 2px solid $gray2Clr;
             h5 {
                 @extend .m-p-none;
             }
@@ -93,7 +93,7 @@
             flex-direction: row-reverse;
             .sp-expe__comp-desc {
                 padding: 0 0 50px 57px;
-                border-left: 2px solid $gray-2;
+                border-left: 2px solid $gray2Clr;
                 .sp-expe__comp-slot {
                     float: left;
                     text-align: left;
@@ -124,7 +124,7 @@
                 position: absolute;
                 left: 50%;
                 bottom: 0;
-                background-color: $gray-2;
+                background-color: $gray2Clr;
                 margin: 0 0 0 -12px;
             }
         }

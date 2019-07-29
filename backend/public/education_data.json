@@ -2,7 +2,7 @@
     "data": [
         {
             "id": 2,
-            "digree": "Bsc",
+            "digree": "Diploma",
             "school": "UNI",
             "year": "2014",
             "description": "completed"
@@ -27,6 +27,13 @@
             "school": "UNI",
             "year": "2014",
             "description": "completed"
+        },
+        {
+            "id": 6,
+            "digree": "Bsc, Bsc, Bsc",
+            "school": "Lorem ipsum",
+            "year": "2015",
+            "description": "Lorem ipsum is the Dummy text of the industry."
         }
     ]
 }

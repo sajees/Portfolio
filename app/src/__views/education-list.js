@@ -25,12 +25,11 @@ export default class EducationList extends Component {
             eduError
           });
         }
-      );
+      )
   }
 
   render() {
     const { eduError, eduIsLoaded, eduItems } = this.state;
-
     if (eduError) {
       return <div>eduError: {eduError.message}</div>;
     } else if (!eduIsLoaded) {
@@ -45,15 +44,13 @@ export default class EducationList extends Component {
                   <div className="sp-expe__comp-desc">
                     <div className="sp-expe__comp-slot">
                       <h6>{item.digree}</h6>
-                      <span>{item.digree}</span>
+                      <span>{item.school}</span>
                     </div>
                   </div>
                   <div className="sp-expe__position-desc">
-                    <h5>{item.digree}</h5>
+                    <h5>{item.year}</h5>
                     <p>
-                      {item.digree}
-                      <br />
-                      {item.digree}
+                      {item.description}
                     </p>
                   </div>
                 </div>

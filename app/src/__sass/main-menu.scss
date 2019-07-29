@@ -1,5 +1,5 @@
 .main-menu-wrapper {
-    background-color: $primary-clr;
+    background-color: $primaryCl;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -41,12 +41,12 @@
                     display: block;
                     padding: 3px 20px;
                     text-decoration: none;
-                    color: $white-clr;
+                    color: $whiteClr;
                     @include fontSize(40);
                     user-select: none;
                     &:hover,
                     &:focus {
-                        color: darker($white-clr, 10%);
+                        color: darker($whiteClr, 10%);
                     }
                 }
             }

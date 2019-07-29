@@ -93,7 +93,7 @@
             @include fontSize(30);
             font-weight: $fwLighter;
             margin-right: 20px;
-            color: $primary-clr;
+            color: $primaryCl;
             position: absolute;
             top: 2px;
             left: 0;
@@ -103,12 +103,12 @@
             @include fontSize(17);
             font-weight: $fwRegular;
             line-height: 3.5rem;
-            color: $gray-clr;
+            color: $grayClr;
             a {
                 @include fontSize(17);
                 font-weight: $fwRegular;
                 line-height: 3.5rem;
-                color: $gray-clr;
+                color: $grayClr;
                 text-decoration: none;
             }
         }
@@ -168,7 +168,7 @@
         }
 
         .sp-profile-hobby__inner {
-            background-color: $gray-clr-d;
+            background-color: $grayDClr;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -186,7 +186,7 @@
             .fa {
                 clear: both;
                 display: block;
-                color: $primary-clr;
+                color: $primaryCl;
                 @include fontSize(40);
             }
 
@@ -194,7 +194,7 @@
                 clear: both;
                 display: block;
                 margin: 5px 0 0 0;
-                color: $white-clr;
+                color: $whiteClr;
                 @include fontSize(18);
                 font-weight: $fwRegular;
             }

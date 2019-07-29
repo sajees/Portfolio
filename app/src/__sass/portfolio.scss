@@ -1,0 +1,85 @@
+.sp-job-items-wrapper {
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    .sp-job {
+        display: inline-block;
+        padding: 10px 12px;
+        width: 33.3333%;
+
+        .sp-job__inner {
+            display: block;
+            width: 100%;
+            height: 0;
+            padding-top: 62%;
+            position: relative;
+            background: rgba($primaryCl,0.3);
+            overflow: hidden;
+
+            .sp-job__img {
+                position: absolute;
+                max-width: 100%;
+                top: 50%;
+                max-height: 180px;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                z-index: 1;
+            }
+
+            .sp-job__hover-wrapper {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                display: table;
+                background: rgba($whiteClr, 0.5);
+                z-index: 2;
+                opacity: 0;
+                transition: all 0.3s ease-out;
+
+                .sp-job__hover-wrapper__inner {
+                    display: table-cell;
+                    text-align: center;
+                    vertical-align: middle;
+
+                    h6.sp-job__title {
+                        @include fontSize(22);
+                        margin-top: 100%;
+                        transition: all 0.3s ease-out;
+                    }
+                    p.sp-job__desc {
+                        @include fontSize(15);
+                    }
+                }
+            }
+        }
+        &:hover,
+        &:focus {
+            .sp-job__inner {
+                .sp-job__hover-wrapper {
+                    opacity: 1;
+                    .sp-job__hover-wrapper__inner {
+                        vertical-align: middle;
+                        h6.sp-job__title {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .sp-job.width1 {
+        width: 33.3333%;
+    }
+
+    .sp-job.width2 {
+        width: 66.6666%;
+    }
+
+    .sp-job.width3 {
+        width: 100%;
+    }
+}

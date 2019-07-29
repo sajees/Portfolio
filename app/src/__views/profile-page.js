@@ -4,10 +4,10 @@ import Button from "../__components/button";
 export default class ProfilePage extends Component {
   constructor() {
     super();
-    this.myButtonClick = this.myButtonClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
-  myButtonClick() {
-    alert("clicked");
+  handleClick() {
+    console.log('got');
   }
   render() {
     return (
@@ -108,6 +108,7 @@ export default class ProfilePage extends Component {
                     btnTitle="Download My CV"
                     btnType=""
                     fontIcon="fa-download"
+                    btnAction={this.handleClick}
                   />
                   <Button
                     btnLabel="Hire Me Now"

@@ -1,0 +1,88 @@
+.sp-services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .service-slot {
+        flex: 0 0 30%;
+        min-height: 160px;
+        margin: 0 0 3% 0;
+        background: $grayClr;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 20px 20px 20px 80px;
+        color: $whiteClr;
+        transition: all 0.3s ease-in-out 0s;
+        overflow: hidden;
+
+        i {
+            @include fontSize(35);
+            position: absolute;
+            top: 70px;
+            left: 25px;
+            color: $primaryCl;
+        } 
+
+        h3 {
+
+        }
+
+        p {
+            color: rgba( $whiteClr, .5 );
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            border-top: 500px solid #fff;
+            border-left: 500px solid transparent;
+            margin-top: -15%;
+            margin-left: 100%;
+            opacity: 0;
+            position: absolute;
+            transform: scale(2);
+            transition: all 0.3s ease-in-out 0s;
+        }
+
+        &:hover,
+        &:focus {
+            background: $primaryCl;
+
+            &:after {
+                margin-left: 0;
+                opacity: 0.2;
+            }
+
+            i {
+                color: $whiteClr
+            }
+
+            p {
+                color: rgba( $whiteClr, .8 );
+            }
+        }
+
+        @include bp(tab) {
+            flex: 0 0 47%;
+            min-height: 120px;
+
+            i {
+                top: 60px;
+            }
+        }
+        @include bp(phone) {
+            min-height: 100px;
+            i {
+                top: 55px;
+            }
+        }
+        @include bp(sphone) {
+            flex: 0 0 100%;
+            min-height: 50px;
+            i {
+                top: 25px;
+            }
+        }
+    }
+}

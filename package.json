@@ -10,7 +10,9 @@
     "start": "nodemon"
   },
   "nodemonConfig": {
-    "ignore": ["app/"]
+    "ignore": [
+      "app/"
+    ]
   },
   "author": "",
   "license": "ISC",

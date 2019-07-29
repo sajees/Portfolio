@@ -1,3 +1,12 @@
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+
 .sp-hide {
     display: none;
 }
@@ -9,7 +18,7 @@
     top: 50px;
     z-index: 100;
     padding: 10px 20px 6px 20px;
-    background-color: $white-clr;
+    background-color: $whiteClr;
     border-radius: 6px;
     user-select: none;
     img {
@@ -49,12 +58,12 @@ main.content {
             display: block;
             text-align: center;
             width: 100%;
-            margin-bottom: 50px;
+            margin-bottom: 85px;
             h2 {
                 @include fontSize(60);
                 margin: 0 0;
                 padding: 0 0;
-                color: $primary-clr;
+                color: $primaryCl;
                 position: relative;
                 display: inline-block;
                 font-weight: $fwBold;
@@ -63,7 +72,7 @@ main.content {
                     content: '';
                     width: 72%;
                     height: 4px;
-                    background-color: $gray-clr;
+                    background-color: $grayClr;
                     position: absolute;
                     bottom: 0;
                     left: 14%;
@@ -78,7 +87,7 @@ main.content {
                 @include fontSize(36);
                 margin: 0 0;
                 padding: 0 0;
-                color: $black-clr;
+                color: $blackClr;
                 position: relative;
                 display: inline-block;
                 font-weight: $fwSemiBold;

@@ -3,12 +3,12 @@
     display: inline-block;
 
     .sp-btn {
-        background: $white-clr;
-        background: linear-gradient(to left, $primary-clr 50%, $white-clr 50%);
+        background: $whiteClr;
+        background: linear-gradient(to left, $primaryCl 50%, $whiteClr 50%);
         background-size: 200% 100%;
         background-position: left bottom;
         transition: all 0.3s ease-out;
-        border: 2px solid $primary-clr;
+        border: 2px solid $primaryCl;
         box-shadow: none;
         appearance: none;
         cursor: pointer;
@@ -18,7 +18,7 @@
         font-family: inherit;
         @include fontSize(22);
         font-weight: $fwSemiBold;
-        color: $primary-clr;
+        color: $primaryCl;
         outline: none;
         user-select: none;
 
@@ -29,7 +29,7 @@
       
         &:hover {
           background-position: right bottom;
-          color: $white-clr;
+          color: $whiteClr;
         }
       }
 }

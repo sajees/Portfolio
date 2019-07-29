@@ -45,7 +45,7 @@ export default class ExperienceList extends Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <div className="sp-emp-list">
+        <div className="sp-emp-list m-b-100">
           <ul>
             {expItems.map(item => (
               <li key={item.id} className="sp-expe">
