@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Service from "./__elements/service";
+import Modal from "../__components/modal";
 
 export default class ServicesPage extends Component {
   render() {
