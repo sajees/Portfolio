@@ -9,6 +9,10 @@
         width: 33.3333%;
         transition: all 0.3s ease-out;
 
+        @include bp(sphone) {
+            width: 100%;
+        }
+
         .sp-job__inner {
             display: block;
             width: 100%;
@@ -75,24 +79,78 @@
 
     .sp-job.width1 {
         width: 33.3333%;
+        @include bp(sphone) {
+            width: 100%;
+        }
     }
 
     .sp-job.width2 {
         width: 66.6666%;
-    }
-
-    .sp-job.height2 {
-        .sp-job__inner {
-            padding-top: 460px;
+        @include bp(sphone) {
+            width: 100%;
         }
     }
 
     .sp-job.width3 {
         width: 100%;
     }
+
+    .sp-job.height2 {
+        .sp-job__inner {
+            padding-top: 460px;
+            @include bp(sphone) {
+                padding-top: 230px;
+            }
+        }
+    }
+    
     .sp-job.height3 {
         .sp-job__inner {
             padding-top: 690px;
+            @include bp(sphone) {
+                padding-top: 230px;
+            }
         }
+    }
+}
+.sp-job-items-wrapper.all {
+    .sp-job {
+        display: inline-block;
+    }
+}
+.sp-job-items-wrapper.web {
+    .sp-job {
+        display: none;
+    }
+    .sp-job.web {
+        display: inline-block;
+    }
+}
+.sp-job-items-wrapper.print {
+    .sp-job {
+        display: none;
+    }
+    .sp-job.print {
+        display: inline-block;
+    }
+}
+
+.sp-tabs {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    .sp-tab {
+        appearance: none;
+        border: none;
+        padding: 10px 15px;
+        margin: 0 2px;
+        @include fontSize(18);
+        outline: none;
+        background: none;
+        cursor: pointer;
+    }
+    .sp-tab.active {
+        background: $primaryCl;
+        color: $whiteClr;
     }
 }

@@ -23,7 +23,7 @@ export default class JobItem extends Component {
     return (
       <>
         <div
-          className={"sp-job " + (this.props.cssClass ? this.props.cssClass : "")} 
+          className={"sp-job " + (this.props.cssClass ? this.props.cssClass : "") + " " + (this.props.jobType ? this.props.jobType : " all")} 
           onClick={this.jobItemClick}
         >
           <div className="sp-job__inner">

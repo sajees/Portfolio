@@ -10,10 +10,14 @@ export default class PortfolioPage extends Component {
       isModalOpen: false,
       selectedTitle: '',
       selectedDesc: '',
-      selectedImg: ''
+      selectedImg: '',
+      selectedCategory: 'all'
     });
     this.handleClickData = this.handleClickData.bind(this);
     this.handleModalClose = this.handleModalClose.bind(this);
+    this.tabClickAll = this.tabClickAll.bind(this);
+    this.tabClickWeb = this.tabClickWeb.bind(this);
+    this.tabClickPrint = this.tabClickPrint.bind(this);
   }
   handleClickData(data) {
     this.setState({
@@ -28,6 +32,24 @@ export default class PortfolioPage extends Component {
       isModalOpen: false
     });
   }
+  tabClickAll(e) {
+    e.preventDefault();
+    this.setState({
+      selectedCategory: 'all'
+    });
+  }
+  tabClickWeb(e) {
+    e.preventDefault();
+    this.setState({
+      selectedCategory: 'web'
+    });
+  }
+  tabClickPrint(e) {
+    e.preventDefault();
+    this.setState({
+      selectedCategory: 'print'
+    });
+  }
   render() {
     return (
       <>
@@ -37,43 +59,56 @@ export default class PortfolioPage extends Component {
               <h2>Portfolio</h2>
             </div>
             <div className="sp-page__content">
-              <div className="sp-job-items-wrapper">
+              <div className="sp-tabs">
+                <button className={"sp-tab " + (this.state.selectedCategory === "all" ? "active" : "")} onClick={this.tabClickAll}>All</button>
+                <button className={"sp-tab " + (this.state.selectedCategory === "web" ? "active" : "")} onClick={this.tabClickWeb}>Web</button>
+                <button className={"sp-tab " + (this.state.selectedCategory === "print" ? "active" : "")} onClick={this.tabClickPrint}>Printing</button>
+              </div>
+              <div className={"sp-job-items-wrapper " + this.state.selectedCategory}>
                 <JobItem
                   logo={PortfolioImg1}
-                  title="MY Title"
+                  title="1 MY Title"
                   desc="This is the dummy text description"
                   jobItemClickAction={this.handleClickData}
+                  jobType="web"
                 />
+                
                 <JobItem
+                  cssClass="width2"
                   logo=""
-                  title="my title 2"
-                  desc="LOrem ipsum"
+                  title="2 5555555555"
+                  desc="rrrrrrrrrrrrrrrrr"
                   jobItemClickAction={this.handleClickData}
+                  jobType="print"
                 />
                 <JobItem
-                  title="My title"
+                  cssClass="width2 height2 "
+                  title="3 My title"
                   desc="This is the dummy text description"
                   jobItemClickAction={this.handleClickData}
                 />
                 <JobItem
-                  cssClass="height2 sajee"
-                  title="My title"
+                  cssClass="height2 sajee "
+                  title="4 My title"
                   desc="This is the dummy text description"
                   jobItemClickAction={this.handleClickData}
+                  jobType="all"
                 />
                 <JobItem
-                  cssClass="width2 height2"
+                  cssClass="width1 height1 "
                   logo=""
-                  title="My title"
+                  title="5 My title"
                   desc="This is the dummy text description"
                   jobItemClickAction={this.handleClickData}
+                  jobType="print"
                 />
                 <JobItem
-                  cssClass="width3 height2"
+                  cssClass="width2 height1 "
                   logo=""
-                  title="My title"
+                  title="6 My title"
                   desc="This is the dummy text description"
                   jobItemClickAction={this.handleClickData}
+                  jobType="web"
                 />
               </div>
             </div>

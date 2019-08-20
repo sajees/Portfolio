@@ -12,6 +12,10 @@
     padding: 15% 10%;
     overflow-y: auto;
 
+    @include bp(lap) {
+        padding: 220px 10% 10% 10%;
+    }
+
     .sp-modal-inner-wrapper {
         position: relative;
         background: white;
@@ -33,6 +37,11 @@
             text-align: center;
             @include fontSize(15);
             font-weight: lighter;
+
+            @include bp(sphone) {
+                top: -16px;
+                right: -16px;
+            }
         }
 
         .sp-modal__inner {
