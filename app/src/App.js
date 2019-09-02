@@ -10,29 +10,49 @@ export default class App extends Component {
     super(props);
     this.state = {
       isMenuOpen: false,
-      staticData: null
+      staticData: null,
+      isScrollTop: true,
     };
     this.handleForMenuToggle = this.handleForMenuToggle.bind(this);
   }
-  // componentDidMount() {
-  //     fetch("/api/static-data")
-  //     .then(response => response.json())
-  //     .then(statData => this.setState({
-  //       staticData: statData[0].HomePage[0].PageTitle
-  //     }))
-  //   }
   handleForMenuToggle() {
     this.setState(state => ({
       isMenuOpen: !state.isMenuOpen
     }));
   }
+  componentDidMount(){
+      document.getElementById('pageWrapper').onscroll = ()=> {
+        this.handleScroll();
+      };
+  }
+  componentWillUnmount(){
+    document.getElementById('pageWrapper').onscroll = ()=> {
+      this.handleScroll();
+    };
+  }
+  handleScroll() {
+    const scrollPosition = document.getElementById('pageWrapper').scrollTop;
+    if ( scrollPosition > 200 ) {
+      this.setState(state => ({
+        isScrollTop : false,
+      }));
+    } else {
+      this.setState(state => ({
+        isScrollTop : true,
+      }));
+    }
+
+  }
   render() {
-    // console.log(this.state.staticData);
     return (
       <>
-        <MainLogo />
+        <div className={"sp-sm-header-wrapper " + (this.state.isScrollTop ? '':'sp-header-wrapper--opened')}></div>
+        <MainLogo 
+          cssClass= {this.state.isScrollTop ? '':'sp-header-wrapper--opened'}
+        />
         <MainMenuIcon
           isMenuOpen={this.state.isMenuOpen}
+          cssClass= {this.state.isScrollTop ? '':'sp-header-wrapper--opened'}
           handleForMenuToggle={this.handleForMenuToggle}
         />
         <MainMenu

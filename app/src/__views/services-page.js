@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Service from "./__elements/service";
-import Modal from "../__components/modal";
 
 export default class ServicesPage extends Component {
   render() {
@@ -14,34 +13,33 @@ export default class ServicesPage extends Component {
             <div className="sp-services-wrapper">
               <Service
                 cssClass="dfdf sajee"
-                fontIconClass="fa fa-phone-square"
+                fontIconClass="fa fa-picture-o"
                 name="Graphic Designing"
                 description="Lorem ipsum is the dummy text of the industry since 1992"
               />
               <Service
-                fontIconClass="fa fa-calendar"
-                name="Graphic Designingddddd"
+                fontIconClass="fa fa-diamond"
+                name="UI/UX Designing"
                 description="Lorem ipsum is the dummy text of the industry since 1992s"
               />
               <Service
-                cssClass="dfdf sajee"
-                fontIconClass="fa fa-phone-square"
-                name="Graphic Designing"
+                fontIconClass="fa fa-code"
+                name="UI Implementation"
                 description="Lorem ipsum is the dummy text of the industry since 1992"
               />
               <Service
-                fontIconClass="fa fa-calendar"
-                name="Graphic Designingddddd"
+                fontIconClass="fa fa-area-chart"
+                name="SEO Optimisation"
                 description="Lorem ipsum is the dummy text of the industry since 1992s"
               />
               <Service
-                fontIconClass="fa fa-calendar"
-                name="Graphic Designingddddd"
+                fontIconClass="fa fa-usd"
+                name="Digital Marketing"
                 description="Lorem ipsum is the dummy text of the industry since 1992s"
               />
               <Service
-                fontIconClass="fa fa-calendar"
-                name="Graphic Designingddddd"
+                fontIconClass="fa fa-refresh"
+                name="Website Revamping"
                 description="Lorem ipsum is the dummy text of the industry since 1992s"
               />
             </div>

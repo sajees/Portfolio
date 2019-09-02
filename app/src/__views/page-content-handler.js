@@ -11,7 +11,7 @@ export default class PageContentHandler extends Component {
   render() {
     return (
       <main className="content">
-        <div className="content-inner-wrapper">
+        <div className="content-inner-wrapper" id="pageWrapper">
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/profile" component={ProfilePage} />

@@ -1,7 +1,13 @@
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     padding: 0;
 }
+
 p {
     margin: 0;
     padding: 0;
@@ -9,6 +15,33 @@ p {
 
 .sp-hide {
     display: none;
+}
+
+.sp-sm-header-wrapper {
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    left: 0;
+    z-index: 99;
+    background: $whiteClr;
+    opacity: 0;
+    top: -110px;
+    transition: all 0.2s ease-in-out 0s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 3px 0;
+    @include bp(lap) {
+        height: 80px;
+    }
+    @include bp(phone) {
+        height: 76px;
+    }
+    @include bp(xsphone) {
+        height: 62px;
+    }
+}
+
+.sp-sm-header-wrapper.sp-header-wrapper--opened {
+    opacity: 1;
+    top: 0;
 }
 
 .sp-main-logo {
@@ -21,14 +54,49 @@ p {
     background-color: $whiteClr;
     border-radius: 6px;
     user-select: none;
+    transition: .25s all ease-in-out;
+
     img {
         width: 100%;
+    }
+    @include bp(lap) {
+        width: 180px;
+        top: 40px;
+        left: 40px;
+    }
+    @include bp(tab) {
+        width: 160px;
+        top: 30px;
+        left: 30px;
+    }
+    @include bp(phone) {
+        width: 140px;
+        top: 20px;
+        left: 20px;
     }
     @include bp(xsphone) {
         width: 120px;
         padding: 5px 8px 2px 8px;
-        top: 30px;
-        left: 30px;
+        top: 15px;
+        left: 15px;
+    }
+}
+
+.sp-main-logo.sp-header-wrapper--opened {
+    width: 150px;
+    left: 0px;
+    top: 10px;
+    @include bp(lap) {
+        width: 150px;
+        top: 5px;
+    }
+    @include bp(phone) {
+        width: 140px;
+    }
+    @include bp(xsphone) {
+        width: 105px;
+        top: 5px;
+        left: 5px;
     }
 }
 
@@ -52,13 +120,40 @@ main.content {
     min-height: 100vh;
     max-width: 1170px;
     margin: 0 auto;
+
     .sp-page {
         padding: 150px 50px 50px 50px;
+        @include bp(lap) {
+            padding: 140px 45px 45px 45px;
+        }
+        @include bp(tab) {
+            padding: 130px 35px 35px 35px;
+        }
+        @include bp(phone) {
+            padding: 120px 25px 25px 25px;
+        }
+        @include bp(xsphone) {
+            padding: 100px 15px 15px 15px;
+        }
+
         .sp-page__title {
             display: block;
             text-align: center;
             width: 100%;
             margin-bottom: 85px;
+            @include bp(lap) {
+                margin-bottom: 65px;
+            }
+            @include bp(tab) {
+                margin-bottom: 55px;
+            }
+            @include bp(phone) {
+                margin-bottom: 45px;
+            }
+            @include bp(xsphone) {
+                margin-bottom: 35px;
+            }
+
             h2 {
                 @include fontSize(60);
                 margin: 0 0;
@@ -68,6 +163,7 @@ main.content {
                 display: inline-block;
                 font-weight: $fwBold;
                 text-transform: uppercase;
+
                 &:after {
                     content: '';
                     width: 72%;
@@ -79,10 +175,12 @@ main.content {
                 }
             }
         }
+
         .sp-page__sub-title {
             display: block;
             width: 100%;
             margin-bottom: 50px;
+
             h2 {
                 @include fontSize(36);
                 margin: 0 0;
@@ -94,6 +192,52 @@ main.content {
                 text-transform: uppercase;
             }
         }
-        .sp-page__content {}
+    }
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    appearance: none;
+    padding: 12px 20px;
+    outline: none;
+    border-radius: 4px;
+    min-height: 42px;
+    border: 1px solid lighten($gray2Clr, 55%);
+    color: $gray2Clr;
+    font-family: "Titillium Web", sans-serif;
+    @include fontSize(16);
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    background: $whiteClr;
+    background: linear-gradient(to left, $primaryCl 50%, $whiteClr 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition: all 0.3s ease-out;
+    border: 2px solid $primaryCl;
+    box-shadow: none;
+    appearance: none;
+    cursor: pointer;
+    padding: 0 30px;
+    height: 50px;
+    line-height: 46px;
+    font-family: inherit;
+    @include fontSize(22);
+    font-weight: $fwSemiBold;
+    color: $primaryCl;
+    outline: none;
+    user-select: none;
+
+    .fa {
+        @include fontSize(18);
+        padding-right: 10px;
+    }
+
+    &:hover {
+        background-position: right bottom;
+        color: $whiteClr;
     }
 }

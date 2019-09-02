@@ -1,5 +1,6 @@
 .main-menu-wrapper {
     background-color: $primaryCl;
+    background-image: linear-gradient(to right, $gradientCl1 , $gradientCl2, $gradientCl3, $gradientCl4, $gradientCl5);
     height: 100%;
     width: 100%;
     position: fixed;
@@ -37,6 +38,7 @@
                 margin: 0 0 10px 0;
                 padding: 0 0;
                 text-align: center;
+                overflow: hidden;
                 a {
                     display: block;
                     padding: 3px 20px;
@@ -44,12 +46,25 @@
                     color: $whiteClr;
                     @include fontSize(40);
                     user-select: none;
+                    position: relative;
+                    opacity: 0;
+                    transition: all 0.7s cubic-bezier(0.420, 0.000, 1.000, 1.000); /* ease-in */
+                    top: 50px;
                     &:hover,
                     &:focus {
                         color: darker($whiteClr, 10%);
                     }
                 }
             }
+        }
+    }
+}
+
+.main-menu-wrapper.main-menu-wrapper--opened {
+    .main-menu-wrapper-inner .main-menu {
+        .main-menu__item a {
+            opacity: 1;
+            top: 0;
         }
     }
 }

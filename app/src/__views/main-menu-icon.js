@@ -15,7 +15,7 @@ export default class MainMenuIcon extends Component {
       open: this.props.isMenuOpen
     });
     return (
-      <button aria-label="Open/Close main menu" title="Menu Icon" className="sp-main-menu-icon" onClick={this.handleClick}>
+      <button aria-label="Open/Close main menu" title="Menu Icon" className={"sp-main-menu-icon " + (this.props.cssClass ? this.props.cssClass : "")} onClick={this.handleClick}>
         <div className={menuIconClass}>
           <span />
           <span />
