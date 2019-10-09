@@ -20,6 +20,9 @@
         width: 100%;
         display: flex;
         flex-direction: row;
+        @include bp(sphone) {
+            flex-direction: column;
+        }
         .sp-expe__comp-desc {
             flex: 1;
             padding: 0 57px 50px 0;
@@ -30,6 +33,9 @@
                 text-align: right;
                 height: 78px;
                 position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 &:before {
                     content: '';
                     width: 12px;
@@ -72,6 +78,9 @@
             flex: 1;
             padding: 0 0 50px 57px;
             border-left: 2px solid $gray2Clr;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             h5 {
                 @extend .m-p-none;
             }

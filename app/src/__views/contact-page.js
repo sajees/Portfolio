@@ -24,7 +24,6 @@ export default class ContactPage extends Component {
     this.setState({message: e.target.value});
   }
   handleSubmit(e) {
-    console.log('submitted');
     e.preventDefault();
 
     fetch('/api/send-email', {
@@ -77,7 +76,7 @@ export default class ContactPage extends Component {
                 </form>
               </div>
               <div className={"sp-contact-form-messager " + (this.state.formSubmitted===true ? '':'sp-hide')}>
-                Submitted
+                <i className="fa fa-check-circle" aria-hidden="true"></i> Form data is submitted Successfully
               </div>
             </div>
           </div>
