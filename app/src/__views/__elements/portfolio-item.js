@@ -30,7 +30,7 @@ export default class JobItem extends Component {
             <img
               className="sp-job__img"
               src={this.props.logo ? this.props.logo : DefaultPortfolioImg}
-              alt="Image of the project"
+              alt="Project"
             />
             <div className="sp-job__hover-wrapper">
               <div className="sp-job__hover-wrapper__inner">

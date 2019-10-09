@@ -34,6 +34,7 @@ export default class Modal extends Component {
                     ? this.props.modalImg
                     : DefaultPortfolioImg
                 }
+                alt="Project"
               />
               <h6>{this.props.modalTitle}</h6>
               <p>{this.props.modalDesc}</p>
